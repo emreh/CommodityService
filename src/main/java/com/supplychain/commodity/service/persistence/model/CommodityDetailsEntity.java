@@ -57,7 +57,10 @@ public class CommodityDetailsEntity extends BaseEntityModel<Long> {
     private double discountPercent;
     // تعداد
     @Column(name = "NUMBER", nullable = false)
-    private Integer number;
+    private BigDecimal quantity;
+    // واحد
+    @Column(name = "UNIT_SYMBOL", length = 20, nullable = false)
+    private String unitSymbol;
     // تاریخ تولید
     @Column(name = "MANUFACTURE_DATE")
     private LocalDate manufactureDate;
@@ -81,10 +84,6 @@ public class CommodityDetailsEntity extends BaseEntityModel<Long> {
     @Column(name = "STATUS", nullable = false)
     @Enumerated(EnumType.STRING)
     private StatusCommodityEnum status;
-
-    @Column(name = "UNIT", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private UnitCommidityEnum unit;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinTable(name = "COMMODITY_DETAILS_TO_MANUFACTURER", joinColumns = @JoinColumn(name = "DETAILS_ID", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "MANUFACTURER_ID", referencedColumnName = "ID"))
