@@ -6,7 +6,6 @@ import java.util.Map;
 
 import com.supplychain.base.model.BaseEntityModel;
 import com.supplychain.commodity.service.persistence.enums.StatusCommodityEnum;
-import com.supplychain.commodity.service.persistence.enums.UnitCommidityEnum;
 import com.supplychain.commodity.service.persistence.util.HashMapConverter;
 
 import jakarta.persistence.CascadeType;
