@@ -5,12 +5,16 @@ import java.time.LocalDate;
 import java.util.Map;
 
 import com.supplychain.base.model.BaseEntityModel;
+import com.supplychain.commodity.service.persistence.enums.StatusCommodityEnum;
+import com.supplychain.commodity.service.persistence.enums.UnitCommidityEnum;
 import com.supplychain.commodity.service.persistence.util.HashMapConverter;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Index;
 import jakarta.persistence.JoinColumn;
@@ -73,6 +77,14 @@ public class CommodityDetailsEntity extends BaseEntityModel<Long> {
     // حداکثر تعداد
     @Column(name = "MAX_NUMBER", nullable = false)
     private Integer maxNumber;
+
+    @Column(name = "STATUS", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private StatusCommodityEnum status;
+
+    @Column(name = "UNIT", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private UnitCommidityEnum unit;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinTable(name = "COMMODITY_DETAILS_TO_MANUFACTURER", joinColumns = @JoinColumn(name = "DETAILS_ID", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "MANUFACTURER_ID", referencedColumnName = "ID"))

@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.supplychain.commodity.service.persistence.model.CommodityDetailsEntity;
 
 @Repository
-public interface CommodityDetailsRepository extends JpaRepository<CommodityDetailsEntity, Long> {
+interface CommodityDetailsRepository extends JpaRepository<CommodityDetailsEntity, Long> {
 }

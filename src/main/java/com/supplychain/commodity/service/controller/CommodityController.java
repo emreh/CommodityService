@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.supplychain.commodity.service.dto.MainGroupCommodityDTO;
-import com.supplychain.commodity.service.manager.CommodityManager;
+import com.supplychain.commodity.service.service.CommodityService;
 
 import jakarta.annotation.security.RolesAllowed;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +19,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class CommodityController {
 
-    private final CommodityManager commodityManager;
+    private final CommodityService commodityManager;
 
     /**
      * Load All Data
