@@ -1,6 +1,6 @@
 package com.supplychain.commodity.service.persistence.enums;
 
-import com.supplychain.commodity.service.util.MessageUtils;
+import com.supplychain.base.uitl.MessageUtils;
 
 public enum StatusCommodityEnum {
 

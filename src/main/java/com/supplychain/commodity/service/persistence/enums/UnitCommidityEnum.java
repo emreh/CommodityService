@@ -3,7 +3,7 @@ package com.supplychain.commodity.service.persistence.enums;
 import java.util.Arrays;
 import java.util.Optional;
 
-import com.supplychain.commodity.service.util.MessageUtils;
+import com.supplychain.base.uitl.MessageUtils;
 
 public enum UnitCommidityEnum {
     GRAM("g", "WEIGHT", "g", 1.0), KILOGRAM("kg", "WEIGHT", "g", 1000.0), MILLIGRAM("mg", "WEIGHT", "g", 0.001),
