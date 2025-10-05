@@ -17,6 +17,8 @@
 
 		<org.mapstruct.version>1.6.3</org.mapstruct.version>
 		<oeg.lombok.version>1.18.38</oeg.lombok.version>
+		
+		<org.spring.boot.version>3.5.6</org.spring.boot.version>
 	</properties>
 
 	<dependencies>
@@ -29,24 +31,24 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>3.5.5</version>
+			<version>${org.spring.boot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-			<version>3.5.5</version>
+			<version>${org.spring.boot.version}</version>
 		</dependency>
 
 		<!-- Start: Caching -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
-			<version>3.5.5</version>
+			<version>${org.spring.boot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
-			<version>3.5.5</version>
+			<version>${org.spring.boot.version}</version>
 		</dependency>
 		<!-- End: Caching -->
 
